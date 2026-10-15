@@ -7,4 +7,4 @@ from a live audit of one prospect's site. No buttons dial or submit. This repo e
 only to make the short demo links reachable while the primary host
 (`nexusdesign.agency`) is offline.
 
-Short link shape: `https://sgscrap.github.io/nexus-fixfirst-demos/d/<code>.html`
+Short link shape: `https://sgscrap.github.io/d/<code>.html`
