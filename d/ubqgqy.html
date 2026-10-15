@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Fix preview — tap-to-call on www.post79zionsville.com</title>
+<style>
+  :root { --ink:#17181c; --muted:#6b6c72; --paper:#ffffff; --bg:#f7f6f2; --gold:#c5a059; --gold-deep:#a0823e; --bad:#b3261e; --bad-bg:#fdeeec; --good:#1b6e3d; --good-bg:#e9f5ee; --line:#e7e4dd; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { -webkit-text-size-adjust: 100%; }
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; background: var(--bg); color: var(--ink); padding: 22px 16px 30px; line-height: 1.5; }
+  .wrap { max-width: 980px; margin: 0 auto; }
+  .kicker { display: inline-flex; align-items: center; gap: 8px; font-size: 11px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--gold-deep); background: #f3ecdd; border: 1px solid #e5d9bd; border-radius: 999px; padding: 6px 14px; }
+  .kicker::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: var(--gold); }
+  header { text-align: center; padding: 10px 0 26px; }
+  header h1 { font-size: clamp(24px, 5.4vw, 38px); line-height: 1.15; letter-spacing: -.022em; font-weight: 800; margin: 14px auto 10px; max-width: 760px; }
+  header p { color: var(--muted); font-size: 14.5px; line-height: 1.65; max-width: 640px; margin: 0 auto; }
+  .chips { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; margin-top: 16px; }
+  .chip { font-size: 12px; font-weight: 600; color: var(--muted); background: var(--paper); border: 1px solid var(--line); border-radius: 999px; padding: 6px 12px; }
+  .chip b { color: var(--ink); font-weight: 750; }
+  .panels { display: grid; grid-template-columns: 1fr 44px 1fr; gap: 14px; align-items: stretch; }
+  @media (max-width: 760px) { .panels { grid-template-columns: 1fr; } }
+  .panel { background: var(--paper); border: 1px solid var(--line); border-radius: 16px; overflow: hidden; box-shadow: 0 1px 2px rgba(23,24,28,.05), 0 10px 30px rgba(23,24,28,.06); }
+  .panel-tag { display: flex; align-items: center; gap: 9px; font-size: 11.5px; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; padding: 13px 20px; }
+  .panel-tag::before { content: ""; width: 8px; height: 8px; border-radius: 50%; flex: none; }
+  .panel-before .panel-tag { background: var(--bad-bg); color: var(--bad); }
+  .panel-before .panel-tag::before { background: var(--bad); }
+  .panel-after .panel-tag { background: var(--good-bg); color: var(--good); }
+  .panel-after .panel-tag::before { background: var(--good); }
+  .flow { display: flex; align-items: center; justify-content: center; }
+  .flow span { display: flex; align-items: center; justify-content: center; width: 34px; height: 34px; border-radius: 50%; background: var(--ink); color: #ffffff; font-size: 16px; font-weight: 700; box-shadow: 0 4px 12px rgba(23,24,28,.28); }
+  @media (max-width: 760px) { .flow { height: 44px; } .flow span { -webkit-transform: rotate(90deg); transform: rotate(90deg); } }
+  .site { padding: 20px; }
+  .site .name { font-size: 19px; font-weight: 750; letter-spacing: -.01em; }
+  .site .domain { color: var(--muted); font-size: 12.5px; font-weight: 600; margin: 2px 0 16px; }
+  .callbox { border: 1px solid var(--line); border-radius: 12px; padding: 14px 16px; background: #fbfaf8; }
+  .callbox .label { font-size: 10.5px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); margin-bottom: 4px; }
+  .phone-row { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 12px 0; border-top: 1px solid var(--line); font-size: 16px; font-weight: 650; }
+  .phone-row:first-of-type { border-top: 0; }
+  .dial-note { font-size: 11.5px; font-weight: 500; color: var(--muted); text-align: right; }
+  a.tap { font-size: 12.5px; font-weight: 700; padding: 8px 16px; border-radius: 999px; text-decoration: none; white-space: nowrap; }
+  .panel-before a.tap { background: var(--bad-bg); color: var(--bad); border: 1px solid #f2cfca; }
+  a.tap.big { display: block; text-align: center; padding: 13px 16px; font-size: 14.5px; border-radius: 10px; }
+  .panel-after a.tap { background: var(--good); color: #ffffff; border: 1px solid var(--good); }
+  .verdict { margin-top: 14px; font-size: 13px; line-height: 1.6; padding: 12px 14px; border-radius: 10px; }
+  .panel-before .verdict { background: var(--bad-bg); color: #7c221c; }
+  .panel-after .verdict { background: var(--good-bg); color: #14512d; }
+  .evidence { margin-top: 18px; background: var(--paper); border: 1px solid var(--line); border-radius: 16px; padding: 20px; font-size: 13px; color: var(--muted); line-height: 1.85; box-shadow: 0 1px 2px rgba(23,24,28,.05); }
+  .evidence strong { color: var(--ink); }
+  .evidence .finding { color: var(--bad); font-weight: 600; }
+  .cta { margin-top: 18px; background: #1d1e24; background: linear-gradient(135deg, #202127, #131418); color: #f5f3ee; border-radius: 16px; padding: 28px 24px; text-align: center; }
+  .cta .cta-kicker { font-size: 11px; font-weight: 800; letter-spacing: .16em; text-transform: uppercase; color: var(--gold); }
+  .cta h2 { font-size: clamp(20px, 4.2vw, 27px); letter-spacing: -.015em; margin: 10px 0 6px; }
+  .cta p { color: #b9bac0; font-size: 14px; line-height: 1.65; max-width: 520px; margin: 0 auto; }
+  .cta a.btn { display: inline-block; margin-top: 18px; background: var(--gold); color: #131418; font-weight: 750; font-size: 14px; text-decoration: none; border-radius: 10px; padding: 13px 26px; }
+  footer { text-align: center; font-size: 11.5px; color: #9a9ba1; padding: 22px 0 6px; line-height: 1.7; }
+  footer a { color: var(--gold-deep); text-decoration: none; font-weight: 600; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="kicker">Fix preview · before / after</div>
+    <h1>The tap-to-call problem on www.post79zionsville.com, and the fix</h1>
+    <p>Both panels show the same call box. On the left, the page as it stands today (audited 2026-10-15).
+    On the right, the same page with every call button dialing the line the business advertises.</p>
+    <div class="chips">
+    <span class="chip">Audit score <b>34/100</b></span>
+      <span class="chip">Live audit of <b>www.post79zionsville.com</b></span>
+      <span class="chip">Inert preview — dials nothing</span>
+    </div>
+  </header>
+  <div class="panels">
+    <section class="panel panel-before">
+      <div class="panel-tag">Before — as audited</div>
+      <div class="site">
+        <div class="name">American Legion Post No. 79</div>
+        <div class="domain">www.post79zionsville.com</div>
+        <div class="callbox">
+          <div class="label">Call the shop</div>
+          
+      <div class="phone-row"><span>(317) 873-3105</span><span class="dial-note">printed on the page</span></div>
+          <div class="phone-row"><span class="dial-note">every &ldquo;tap to call&rdquo; button on the page</span><a class="tap" href="#">Tap to call</a></div>
+        </div>
+        <div class="verdict">A visitor who taps nothing can still read the number. A visitor on a phone — most of them — expects it to dial. Here it does nothing.</div>
+      </div>
+    </section>
+    <div class="flow" aria-hidden="true"><span>&rarr;</span></div>
+    <section class="panel panel-after">
+      <div class="panel-tag">After — the fix</div>
+      <div class="site">
+        <div class="name">American Legion Post No. 79</div>
+        <div class="domain">www.post79zionsville.com</div>
+        <div class="callbox">
+          <div class="label">Call the shop</div>
+          
+      <div class="phone-row"><span>(317) 873-3105</span><span class="dial-note">printed on the page</span></div>
+          <div class="phone-row"><span class="dial-note">all 1 call buttons, repaired</span><a class="tap" href="#">Tap to call</a></div>
+        </div>
+        <div class="verdict">Every button now dials (317) 873-3105 — the number the page advertises. A one-line change per link, shipped in an afternoon.</div>
+      </div>
+    </section>
+  </div>
+  <div class="evidence">
+    <strong>What the audit measured:</strong> <span class="finding">a phone number is printed but nothing on the page dials it — mobile visitors cannot tap it</span>.<br>
+    <strong>Printed on the page:</strong> (317) 873-3105<br>
+    <strong>What the buttons dial:</strong> nothing — no tap-to-call links exist<br>
+    <strong>The fix:</strong> point every tel: link at <strong>(317) 873-3105</strong>. This preview is inert — the buttons here dial nothing; they are demo copies, not live links.
+  </div>
+  <div class="cta">
+    <div class="cta-kicker">Want this fix on your site?</div>
+    <h2>One reply and it ships.</h2>
+    <p>Reply to the text this preview came with — the same repair on www.post79zionsville.com, usually live within the week. Nexus Design fixes pages, not just points at them.</p>
+    <a class="btn" href="https://nexusdesign.agency">See the agency</a>
+  </div>
+  <footer>Generated by <a href="https://nexusdesign.agency">Nexus Design</a> from a live audit of www.post79zionsville.com · the numbers above are that page's own · noindex</footer>
+</div>
+</body>
+</html>
